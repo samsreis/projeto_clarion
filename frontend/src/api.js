@@ -1,6 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const BASE_URL = "https://fifty-humans-talk.loca.lt";
+const BASE_URL = " https://polite-garlics-cover.loca.lt"; // Link novo
 
 export const apiFetch = async (rota, metodo = "GET", corpo = null) => {
   const token = await AsyncStorage.getItem("token");
@@ -17,11 +17,11 @@ export const apiFetch = async (rota, metodo = "GET", corpo = null) => {
 
   if (!res.ok) {
     const textoErro = await res.text();
-    console.log("STATUS DO ERRO:", res.status);
-    console.log("CORPO DO ERRO:", textoErro);
     throw new Error(`Erro ${res.status}: ${textoErro}`);
   }
 
   if (res.status === 204) return null;
-  return res.json();
+
+  const text = await res.text();
+  return text ? JSON.parse(text) : null;
 };

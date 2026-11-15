@@ -1,131 +1,44 @@
-O seu arquivo `.txt` já está com a formatação de Markdown perfeita. Basta copiar o conteúdo abaixo e colar no seu `README.md`.
+# Clarion - Gerenciador de Tarefas
 
-```markdown
-📱 Clarion - Gerenciador de Tarefas
-
-Projeto Full-Stack Mobile desenvolvido para gerenciamento de tarefas.
+Projeto Full-Stack Mobile e Web desenvolvido para gerenciamento de tarefas.
 
 **Integrante:** Samuel Silva dos Reis
 **RM:** 1143174579
 
-## 📌 Sobre o Projeto
+## Sobre o Projeto
+O Clarion é um aplicativo para gerenciamento de tarefas. O usuário pode criar uma conta, realizar login e gerenciar suas próprias tarefas (criar, listar e excluir). Possui design minimalista em preto e branco.
 
-O Clarion é um aplicativo mobile para gerenciamento de tarefas. Nele, o usuário pode criar uma conta, realizar login e gerenciar suas próprias tarefas de maneira simples e intuitiva.
+## Tecnologias Utilizadas
+- **Frontend:** React Native (Expo) + JavaScript.
+- **Backend:** Java (Spring Boot).
+- **Banco de Dados:** H2 (em memória).
+- **Segurança:** Autenticação via Token JWT.
+- **Compatibilidade:** Roda em Android, iOS e Web.
 
-### Funcionalidades
-- Cadastro de usuários.
-- Login e autenticação.
-- Criação de tarefas.
-- Listagem de tarefas.
-- Marcação de tarefas como concluídas.
-- Exclusão de tarefas.
-- Gerenciamento individual das tarefas de cada usuário.
+## Como Rodar
+O projeto precisa de 3 terminais abertos simultaneamente.
 
-## 🛠️ Tecnologias Utilizadas
-
-| Camada | Tecnologia |
-| :--- | :--- |
-| **Frontend** | React Native |
-| **Framework Mobile** | Expo |
-| **Linguagem Frontend** | JavaScript |
-| **Backend** | Java |
-| **Framework Backend** | Spring Boot |
-| **Banco de Dados** | H2 |
-| **Segurança** | JWT (JSON Web Token) |
-
-## 🚀 Como Rodar o Projeto
-
-Para executar o projeto, siga os passos abaixo.
-
-### 1. Backend (Java + Spring Boot)
-
-Abra um terminal na pasta `backend` e execute o comando:
-
-```bash
+### Passo 1: Backend (Java)
+Abra o terminal na pasta `backend` e rode:
 mvn spring-boot:run
-```
+O servidor iniciará na porta 8080. (Aviso: o banco H2 apaga os dados toda vez que o servidor é reiniciado).
 
-O backend será iniciado na porta 8080.
-
-> **Observação:** O banco de dados H2 é executado em memória. Portanto, ao reiniciar o servidor, todas as contas e tarefas cadastradas serão apagadas.
-
-### 2. Túnel para o Backend
-
-Como o celular não está necessariamente conectado à mesma rede do computador, é necessário expor o backend à internet utilizando o LocalTunnel.
-
-Abra um novo terminal e execute:
-
-```bash
+### Passo 2: Túnel para o Backend
+Abra um segundo terminal e rode:
 npx localtunnel --port 8080
-```
+Ele vai gerar um link (ex: https://algum-nome.loca.lt). Copie esse link e cole na variável BASE_URL dentro do arquivo frontend/src/api.js.
 
-Após executar o comando, será gerado um link semelhante a:
-
-```text
-https://algum-nome.loca.lt
-```
-
-Copie o endereço gerado e cole na variável `BASE_URL`, localizada no arquivo:
-
-```text
-frontend/src/api.js
-```
-
-**Exemplo:**
-
-```javascript
-const BASE_URL = "https://algum-nome.loca.lt";
-```
-
-### 3. Frontend (React Native + Expo)
-
-Abra um terceiro terminal na pasta `frontend`.
-
-Primeiro, instale as dependências:
-
-```bash
+### Passo 3: Frontend (React Native / Expo)
+Abra um terceiro terminal na pasta `frontend` e rode:
 npm install
-```
-
-Depois, inicie o Expo:
-
-```bash
 npx expo start -c --tunnel
-```
 
-Após a inicialização, será exibido um QR Code no terminal.
+### Como Testar
+- **No Celular:** Baixe o app "Expo Go". Escaneie o QR Code que apareceu no terceiro terminal.
+- **No Navegador:** Com o terminal do Expo rodando, aperte a tecla w no teclado.
+- **Atenção Web:** Se der erro de "Failed to fetch", abra o link do localtunnel no navegador e clique em "Click to Continue".
 
-- **Android:** Escaneie o QR Code utilizando o aplicativo Expo Go.
-- **iOS:** Escaneie o QR Code utilizando a câmera do dispositivo e abra pelo Expo Go.
-
-## 💻 Comandos para Windows (Ambiente da Faculdade)
-
-Caso o PowerShell bloqueie a execução de comandos do Node.js ou npm devido às políticas de execução de scripts, siga os passos abaixo.
-
-Abra o PowerShell e execute:
-
-```powershell
+## Comandos para Windows (Faculdade)
+Caso o PowerShell bloqueie a execução do Node/npm na faculdade, abra o PowerShell e rode:
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-```
-
-Quando solicitado, pressione `S` e depois `Enter` para confirmar.
-
-Após isso, tente executar novamente os comandos do projeto.
-
----
-
-## 👨‍💻 Desenvolvedor
-
-**Samuel Silva dos Reis**
-RM: 1143174579
-
-Projeto desenvolvido como parte da disciplina de Full-Stack Mobile.
-```
-
-Após substituir o conteúdo do arquivo `README.md`, rode no terminal para subir a atualização final:
-
-```bash
-git add README.md
-git commit -m "Documentacao final formatada"
-git push origin main
-```
+Pressione S e dê Enter quando solicitado.
