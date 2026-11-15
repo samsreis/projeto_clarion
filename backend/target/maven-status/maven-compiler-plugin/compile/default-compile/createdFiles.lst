@@ -1,0 +1,7 @@
+com/clarion/Usuario.class
+com/clarion/Tarefa.class
+com/clarion/TarefaRepository.class
+com/clarion/AuthController.class
+com/clarion/TarefaController.class
+com/clarion/UsuarioRepository.class
+com/clarion/BackendApplication.class
