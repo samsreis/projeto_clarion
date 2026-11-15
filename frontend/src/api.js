@@ -1,17 +1,27 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const BASE_URL = "http://10.0.2.2:8080"; // Para emulador Android. Troque pelo IP do seu PC ou ngrok se for celular físico.
+const BASE_URL = "https://fifty-humans-talk.loca.lt";
 
 export const apiFetch = async (rota, metodo = "GET", corpo = null) => {
   const token = await AsyncStorage.getItem("token");
-  const headers = { "Content-Type": "application/json" };
+  const headers = {
+    "Content-Type": "application/json",
+    "Bypass-Tunnel-Reminder": "true",
+  };
   if (token) headers["Authorization"] = `Bearer ${token}`;
 
   const opcoes = { method: metodo, headers };
   if (corpo) opcoes.body = JSON.stringify(corpo);
 
   const res = await fetch(`${BASE_URL}${rota}`, opcoes);
-  if (!res.ok) throw new Error("Erro na requisição");
+
+  if (!res.ok) {
+    const textoErro = await res.text();
+    console.log("STATUS DO ERRO:", res.status);
+    console.log("CORPO DO ERRO:", textoErro);
+    throw new Error(`Erro ${res.status}: ${textoErro}`);
+  }
+
   if (res.status === 204) return null;
   return res.json();
 };

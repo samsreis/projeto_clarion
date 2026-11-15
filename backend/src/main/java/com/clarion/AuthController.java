@@ -21,11 +21,12 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody Usuario u) {
+    public java.util.Map<String, String> login(@RequestBody Usuario u) {
         Usuario user = repo.findByEmail(u.email).orElseThrow();
         if (!user.senha.equals(u.senha))
             throw new RuntimeException("Erro");
-        return Jwts.builder().setSubject(user.id.toString()).signWith(KEY).compact();
+        String token = Jwts.builder().setSubject(user.id.toString()).signWith(KEY).compact();
+        return java.util.Map.of("token", token);
     }
 
     public static Long validar(String token) {

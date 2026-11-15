@@ -7,15 +7,15 @@ export default function Login({ navigation, setLogado }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
-  const entrar = async () => {
-    try {
-      const token = await apiFetch("/auth/login", "POST", { email, senha });
-      await AsyncStorage.setItem("token", token);
-      setLogado(true);
-    } catch (e) {
-      alert("Login falhou");
-    }
-  };
+    const entrar = async () => {
+      try {
+        const dados = await apiFetch("/auth/login", "POST", { email, senha });
+        await AsyncStorage.setItem("token", dados.token); // Pega o .token aqui
+        setLogado(true);
+      } catch (e) {
+        alert("Login falhou: " + e.message);
+      }
+    };
 
   return (
     <View style={s.c}>
