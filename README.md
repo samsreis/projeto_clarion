@@ -51,10 +51,10 @@ Frontend: cd Documentos, cd projeto_clarion, cd frontend, npx expo start -c --tu
 
 ### Talvez tenha que Instalar umas coisinhas
 
-**cd Downloads**
-**cd projeto_clarion-main**
-**cd backend**
-**cd mvn spring-boot:run**
-**cd frontend**
-**cd npx localtunnel --port 8080**
-**cd npx expo start -c --tunnel**
+- **cd Downloads**
+- **cd projeto_clarion-main**
+- **cd backend**
+- **cd mvn spring-boot:run**
+- **cd frontend**
+- **cd npx localtunnel --port 8080**
+- **cd npx expo start -c --tunnel**
