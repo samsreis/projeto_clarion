@@ -7,8 +7,8 @@ Projeto Full-Stack Mobile e Web desenvolvido para gerenciamento de tarefas.
 - Eros Felipe de Oliveira Rego, RA: (1143152106) 
 - Leonardo Cavalcanti da Silva, RA: (1143174575)
 - Pedro Wallas Santana da Silva, RA: (Abanonou o projeto)
-- Richard Arthur da Silva Souza, RA: (Abandonou o projeto)
-- Cristopher Luis Mota Abreu, RA: (Abandonou o projeto)
+- Richard Arthur da Silva Souza, RA: 
+- Cristopher Luis Mota Abreu, RA: 
 - Gustavo Gila Pereira, RA: (Abandonou o projeto)
 - Fernando Florencio Nascimento, RA: (1142617905)
 
