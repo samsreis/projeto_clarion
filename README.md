@@ -3,10 +3,14 @@
 Projeto Full-Stack Mobile e Web desenvolvido para gerenciamento de tarefas.
 
 **Integrante:** 
-- Samuel Silva dos Reis, RM: 1143174579
-- Eros Felipe de Oliveira Rego, RM: 1143152106
-- Leonardo Cavalcanti da Silva, RM: 1143185252
-- Pedro Wallas Santana da Silva, RM 1143144733
+- Samuel Silva dos Reis, RA: (1143174579) 
+- Eros Felipe de Oliveira Rego, RA: (1143152106) 
+- Leonardo Cavalcanti da Silva, RA: (1143174575)
+- Pedro Wallas Santana da Silva, RA: (Abanonou o projeto)
+- Richard Arthur da Silva Souza, RA: (Abandonou o projeto)
+- Cristopher Luis Mota Abreu, RA: (Abandonou o projeto)
+- Gustavo Gila Pereira, RA: (Abandonou o projeto)
+- Fernando Florencio Nascimento, RA: (1142617905)
 
 ## Sobre o Projeto
 O Clarion é um aplicativo para gerenciamento de tarefas. O usuário pode criar uma conta, realizar login e gerenciar suas próprias tarefas (criar, listar e excluir). Possui design minimalista em preto e branco.
