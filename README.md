@@ -43,6 +43,16 @@ Caso o PowerShell bloqueie a execução do Node/npm na faculdade, abra o PowerSh
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 Pressione S e dê Enter quando solicitado.
 
+### Talvez tenha que Instalar umas coisinhas
+
+cd Downloads
+cd projeto_clarion-main
+cd backend
+cd mvn spring-boot:run
+cd frontend
+cd npx localtunnel --port 8080
+cd npx expo start -c --tunnel
+
 ## Comandos de ações (Faculdade)
 
 Backend: cd Documentos, cd projeto_clarion, cd backend, mvn spring-boot:run.
