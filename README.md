@@ -6,6 +6,7 @@ Projeto Full-Stack Mobile e Web desenvolvido para gerenciamento de tarefas.
 - Samuel Silva dos Reis, RM: 1143174579
 - Eros Felipe de Oliveira Rego, RM: 1143152106
 - Leonardo Cavalcanti da Silva, RM: 1143185252
+- Pedro Wallas Santana da Silva, RM 1143144733
 
 ## Sobre o Projeto
 O Clarion é um aplicativo para gerenciamento de tarefas. O usuário pode criar uma conta, realizar login e gerenciar suas próprias tarefas (criar, listar e excluir). Possui design minimalista em preto e branco.
@@ -60,3 +61,7 @@ Frontend: cd Documentos, cd projeto_clarion, cd frontend, npx expo start -c --tu
 - **cd frontend**
 - **cd npx localtunnel --port 8080**
 - **cd npx expo start -c --tunnel**
+
+### OBSERVAÇÃO:
+
+Devido a um erro ao usar a ATRASADA do expo go, o projeto foi retirado do ar, os consertos de versão foram realizados por Samuel e devolvidos ao um novo repositório.
